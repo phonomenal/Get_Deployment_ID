@@ -16,7 +16,7 @@ if (process.env.TOKEN)
 }
 else
 {
-   myToken = core.getInput('myToken');
+   myToken = core.getInput('github-token');
 }
 
 let refToSearch = "";
