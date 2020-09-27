@@ -1,6 +1,10 @@
 name: 'Get Deployment ID'
 description: 'Get an deployment ID for a specific REF and environment'
 inputs:
+  github-token: 
+    description: The GitHub token used to create an authenticated client
+    default: ${{ github.token }}
+    required: true
   ref-to-search:
     description: 'ref of the branch/commit to search by'
     required: true
