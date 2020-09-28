@@ -61,7 +61,7 @@ async function listDeployments(refTag)
     ref: refTag
     })
 
-    return deployments;
+    return deployments.reverse();
 
   }
   catch(error) 
@@ -85,7 +85,12 @@ async function getDeployments(envName)
     {
         console.log('For environment ' + deployments[i].environment)
         const deploymentId = deployments[i].id
-        console.log("Deployment ID: " +deploymentId)
+        const deploymentCreatedAt = deployments[i].created_at
+        const deploymentUpdatedAt = deployments[i].updated_at
+        console.log("Deployment ID: " + deploymentId)
+        console.log("Created at: " + deploymentCreatedAt)
+        console.log("Updated at: " + deploymentUpdatedAt)
+
 
         core.setOutput("deploymentId", deploymentId);
     }
