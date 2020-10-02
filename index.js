@@ -56,8 +56,8 @@ async function listDeployments(refTag)
   {
   //Check if milestone exists
     const { data: deployments } = await octokit.repos.listDeployments({
-    owner: 'james-leha',
-    repo: 'ReadingTime3',
+    owner: github.context.owner,
+    repo: github.context.repo,
     ref: refTag
     })
 
