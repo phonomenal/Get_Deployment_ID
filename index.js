@@ -77,8 +77,6 @@ async function getDeployments(envName)
 {
   var deployments = await listDeployments(refToSearch);
 
-  console.log(deployments[0].environment);
-
   for(i = 0 ;i < deployments.length;i++)
   {
     if (deployments[i].environment == envName)
