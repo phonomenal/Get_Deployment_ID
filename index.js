@@ -70,7 +70,6 @@ async function listDeployments(refTag)
     console.log("ERROR listing Deployments: " + error.message)    
     return false;
   };
-
 }
 
 async function getDeployments(envName)
@@ -92,10 +91,7 @@ async function getDeployments(envName)
 
         core.setOutput("deploymentId", deploymentId);
     }
-    
   }
-
-
 }
 
 getDeployments(envName);
