@@ -1,5 +1,9 @@
 name: 'Get Deployment'
 description: 'Get Deployment for a specific `ref`, `environment` and `status`'
+author: james-leha@github.com, hello@cloudposse.com
+branding:
+  icon: 'server'
+  color: 'white'
 inputs:
   github-token: 
     description: The GitHub token
