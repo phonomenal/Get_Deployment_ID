@@ -5,7 +5,7 @@
 #
 
 # Name of this project
-name: github-action-get-deployment
+name: github-action-seek-deployment
 
 # Tags of this project
 tags:
@@ -18,13 +18,13 @@ tags:
 license: "APACHE2"
 
 # Canonical GitHub repo
-github_repo: cloudposse/github-action-get-deployment
+github_repo: cloudposse/github-action-seek-deployment
 
 # Badges to display
 badges:
   - name: "Latest Release"
-    image: "https://img.shields.io/github/release/cloudposse/github-action-get-deployment.svg"
-    url: "https://github.com/cloudposse/github-action-get-deployment/releases/latest"
+    image: "https://img.shields.io/github/release/cloudposse/github-action-seek-deployment.svg"
+    url: "https://github.com/cloudposse/github-action-seek-deployment/releases/latest"
   - name: "Slack Community"
     image: "https://slack.cloudposse.com/badge.svg"
     url: "https://slack.cloudposse.com"
@@ -53,7 +53,7 @@ usage: |-
         runs-on: ubuntu-latest
         steps:
           - name: Seek deployment
-            uses: cloudposse/github-action-get-deployment@main
+            uses: cloudposse/github-action-seek-deployment@main
             id: deployment
             with:
               github-token: ${{ secrets.GITHUB_TOKEN }}

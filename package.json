@@ -1,5 +1,5 @@
 {
-  "name": "github-action-get-deployment",
+  "name": "github-action-seek-deployment",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
