@@ -1,8 +1,8 @@
-name: 'Get Deployment ID'
-description: 'Get an deployment ID for a specific REF and environment'
+name: 'Get Deployment'
+description: 'Get Deployment for a specific `ref`, `environment` and `status`'
 inputs:
   github-token: 
-    description: The GitHub token used to create an authenticated client
+    description: The GitHub token
     default: ${{ github.token }}
     required: true
   ref:
