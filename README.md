@@ -80,12 +80,12 @@ It's 100% Open Source and licensed under the [APACHE2](LICENSE).
           id: deployment
           with:
             github-token: ${{ secrets.GITHUB_TOKEN }}
-            env-name: dev
-            ref-to-search: ${{ github.event.pull_request.head.ref }}
+            environment: dev
+            ref: ${{ github.event.pull_request.head.ref }}
             status: success
 
       outputs:
-        id: "${{ steps.deployment.outputs.deploymentId }}"
+        id: "${{ steps.deployment.outputs.id }}"
 ```
 
 
@@ -98,16 +98,16 @@ It's 100% Open Source and licensed under the [APACHE2](LICENSE).
 
 | Name | Description | Default | Required |
 |------|-------------|---------|----------|
-| env-name | environment name to get ID for | N/A | true |
+| environment | Environment name | N/A | true |
 | github-token | The GitHub token used to create an authenticated client | ${{ github.token }} | true |
-| ref-to-search | ref of the branch/commit to search by | N/A | true |
+| ref | Branch or commit SHA | N/A | true |
 | status | status to get ID for | N/A | false |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| deploymentId | deployment id retrieved based on ref and environment |
+| id | Deployment ID |
 <!-- markdownlint-restore -->
 
 
